@@ -1,7 +1,5 @@
-<p style='font-size:50px'>Enter the first or last name of the speaker below</p>
-<input id="input" style='border: 5px solid #000; font-size:50px'></br></br></br>
-<button style='font-size:50px' onclick="getLinks()">Click here to get links to their talks(s)</button></br></br></br>
-
+</br><input id=input size=40 placeholder="Type the name of the speaker here, then press enter"
+	style='border: 5px solid #000; font-size:50px'></br></br></br>
 <p id="output" style='font-size:60px'></p>
 
 <p style='font-size:50px'>A QR code link to this webapp:</p>
@@ -28,11 +26,16 @@
 		Q = D.map(q => [q[0],RegExp(word).test(q[1].toLowerCase())])
 		Q = Q.filter(q=>q[1] === true)
 		H = Q.map(q=>url+q[0])
-		H = H.map(s => '<a href="'+s+'">'+s.split('=')[1]+'</a> ').join('')
+		H = H.map(s => '<a href="'+s+'" target="_blank">'+s.split('=')[1]+'</a> ').join('')
 		document.getElementById('output').innerHTML = H
 		if (word=='') document.getElementById('output').innerHTML = 'No name entered'
 		if (Q.length == 0) document.getElementById('output').innerHTML = 'Name not found'
 	}
+
+	input.addEventListener("keyup", function(event) {
+		// 13 == enter
+		if (event.keyCode === 13) getLinks()
+	})
 
 
 </script>
