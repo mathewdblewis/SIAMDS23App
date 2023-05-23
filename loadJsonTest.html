@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Load JSON and Display in Popup</title>
+  <title>Load Text from URL and Display in Popup</title>
   <script>
-    function loadJSON() {
+    function loadText() {
       var url = "https://htmlpreview.github.io/?https://github.com/mathewdblewis/SIAMDS23App/blob/main/data.json";
 
       fetch(url)
-        .then(response => response.json())
-        .then(data => {
-          // Process the JSON data
-          console.log(data);
+        .then(response => response.text())
+        .then(text => {
+          // Process the text data
+          console.log(text);
           
-          // Display JSON in a popup
-          alert(JSON.stringify(data, null, 2));
+          // Display text in a popup
+          alert(text);
         })
         .catch(error => {
           console.log("Error: " + error);
@@ -22,10 +22,8 @@
   </script>
 </head>
 <body>
-  <h1>Load JSON and Display in Popup</h1>
+  <h1>Load Text from URL and Display in Popup</h1>
 
-  <button onclick="loadJSON()">Load JSON</button>
+  <button onclick="loadText()">Load Text</button>
 </body>
 </html>
-
-
