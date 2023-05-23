@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Load JSON and Display in Popup</title>
+  <script>
+    function loadJSON() {
+      var url = "https://htmlpreview.github.io/?https://github.com/mathewdblewis/SIAMDS23App/blob/main/data.json";
+
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          // Process the JSON data
+          console.log(data);
+          
+          // Display JSON in a popup
+          alert(JSON.stringify(data, null, 2));
+        })
+        .catch(error => {
+          console.log("Error: " + error);
+        });
+    }
+  </script>
+</head>
+<body>
+  <h1>Load JSON and Display in Popup</h1>
+
+  <button onclick="loadJSON()">Load JSON</button>
+</body>
+</html>
+
+
