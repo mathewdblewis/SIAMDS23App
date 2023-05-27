@@ -18,6 +18,7 @@
     style="width: 1100px; font-size: 45px; border-width: 5px;"
     >
   <p id="results" style="font-size: 45px"></p>
+  <a id="talkLink" style="font-size: 45px"></a>
 
   <table id=myTable style='font-size: 30px;'>
     <tr>
@@ -67,6 +68,7 @@
         
         var table = document.getElementById("myTable")
         var resultsList = document.getElementById("results")
+        var talkLink = document.getElementById("talkLink")
         if (searchResults.length > 0) {
           table.style.display = 'table'
           resultsList.innerHTML =  "Showing results for <b>" + searchResults[0].item.name
@@ -80,11 +82,13 @@
           var day = data['day'][i].slice(0,3)
           var room = data["room"][i].split(' - ')[0]
           var name = data['names'][i]
+          var talk = data['talkTitle_'][i]
           
           resultsList.innerHTML += '</br></br>'
           resultsList.innerHTML += 'On <b>' + day + '.</b> in the <b>' + room + '</b> room, <b>'  + name
           resultsList.innerHTML += '</b> will be presenting:</br>'
-          resultsList.innerHTML + '<a href="http://www.example.com">Visit Example.com</a>'
+          talkLink.innerHTML = talk
+          talkLink.href = 'https://www.example.com'
 //           resultsList.innerHTML += data['talkTitle_'][i]
 //           '</a>' <a href=google.com>
           
