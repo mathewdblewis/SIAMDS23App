@@ -14,17 +14,13 @@
     for (var k in d1) {if (!(k in d2) || d2[k]<d1[k]) return false}
     return true
   }
-  var data = ''
-  async function getData(){
-    data = await(await fetch('https://raw.githubusercontent.com/mathewdblewis/SIAMDS23App/main/data.txt')).text()
-    console.log(data.length)
-  }
-  
-  getData()
+  var data = (async function(){
+    return await(await fetch('https://raw.githubusercontent.com/mathewdblewis/SIAMDS23App/main/data.txt')).text()
+  })()
    
  function doClick(){
-//    alert(data.slice(0,10))
-   alert(data.length)
+   alert(data.slice(0,10))
+//    alert(data.length)
  }
   
 </script>
