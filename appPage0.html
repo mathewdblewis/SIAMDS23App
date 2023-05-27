@@ -54,14 +54,13 @@
 
         
         
-        var table = document.getElementById("myTable")
+        
         var resultsList = document.getElementById("results")
         var talkLink = document.getElementById("talkLink")
         var line2 = document.getElementById("line2")
         var sessLink = document.getElementById("sessLink")
         var line3 = document.getElementById("line3")
         if (searchResults.length > 0) {
-          table.style.display = 'table'
           resultsList.innerHTML =  "Showing results for <b>" + searchResults[0].item.name
           if (searchResults.length>1) resultsList.innerHTML += '</b></br>Were you looking for one of these speakers?</br>'
           for (let t=1; t<Math.min(4,searchResults.length); t++){
@@ -89,7 +88,6 @@
           
         } else {
           resultsList.innerHTML = 'Speaker not found'
-          table.style.display = 'none'
         }
       }
     }
