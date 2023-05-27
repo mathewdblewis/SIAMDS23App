@@ -18,7 +18,7 @@
     style="width: 1100px; font-size: 45px; border-width: 5px;"
     >
   <p id="results" style="font-size: 45px"></p>
-  <a id="talkLink" style="font-size: 45px"></a>
+  <a id="talkLink" target='blank' style="font-size: 45px"></a>
 
   <table id=myTable style='font-size: 30px;'>
     <tr>
@@ -88,9 +88,7 @@
           resultsList.innerHTML += 'On <b>' + day + '.</b> in the <b>' + room + '</b> room, <b>'  + name
           resultsList.innerHTML += '</b> will be presenting:</br>'
           talkLink.innerHTML = talk
-          talkLink.href = 'https://www.example.com'
-//           resultsList.innerHTML += data['talkTitle_'][i]
-//           '</a>' <a href=google.com>
+          talkLink.href = 'https://meetings.siam.org/sess/dsp_talk.cfm?p='+data['talkID_'][i]
           
          
           
