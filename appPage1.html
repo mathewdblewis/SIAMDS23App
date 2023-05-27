@@ -23,21 +23,6 @@
   <a id="sessLink" target='blank' style="font-size: 45px"></a>
   <p id="line3" style="font-size: 45px"></p>
 
-  <table id=myTable style='font-size: 30px;'>
-    <tr>
-      <td><span id=0 target='_blank' href="#"></span></td>
-      <td><a    id=1 target='_blank' href="#"></a></td>
-    </tr>
-    <tr>
-      <td><span id=2 target='_blank' href="#"></span></td>
-      <td><a    id=3 target='_blank' href="#"></a></td>
-    </tr>
-    <tr>
-      <td><span id=4 target='_blank' href="#"></span></td>
-      <td><span id=5 target='_blank' href="#"></span></td>
-    </tr>
-  </table>
-
 
   <p style='font-size:50px'>A QR code link to this webapp:</p>
   <a href="www.qr-code-generator.com/?utm_medium=email&utm_campaign=60ca6572d95fed0001396323&utm_source=5c097869bf21d04a4bb202a1&abe=0&agent_id=5c097869bf21d04a4bb202a1" border="0" style="cursor:default" rel="nofollow"></a><img width='700' src="https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fhtmlpreview.github.io%2F%3Fhttps%3A%2F%2Fgithub.com%2Fmathewdblewis%2FSIAMDS23App%2Fblob%2Fmain%2FappPage.html&chs=180x180&choe=UTF-8&chld=L|2">
@@ -101,15 +86,6 @@
           line3.innerHTML = 'which is being held during <b>' + data['sessTime'][i] + '</b>'
          
           
-          document.getElementById(0).innerHTML = data['talkTime_'][i]
-          document.getElementById(2).innerHTML = data['sessTime'][i]
-          document.getElementById(4).innerHTML = data['day'][i]
-
-          document.getElementById(1).innerHTML = data['talkTitle_'][i]
-          document.getElementById(1).href      = 'https://meetings.siam.org/sess/dsp_talk.cfm?p='+data['talkID_'][i]
-          document.getElementById(3).innerHTML = data['sessTitle'][i]
-          document.getElementById(3).href      = 'https://meetings.siam.org/sess/dsp_programsess.cfm?sessioncode='+data['sessID'][i]
-          document.getElementById(5).innerHTML = data['room'][i]
           
         } else {
           resultsList.innerHTML = 'Speaker not found'
