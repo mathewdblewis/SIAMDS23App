@@ -77,8 +77,11 @@
           
           let i = data["names"].indexOf(searchResults[0].item.name)
           
+          var day = data['day'][i].slice(0,3)
+          var room = data["room"][i]
+          
           resultsList.innerHTML += '</br></br>'
-          resultsList.innerHTML += 'On ' + data['day'][i] + ' in ' + data["room"][i] + ', ' + data['names'][i]  + ' will be giving a talk titled</br>'
+          resultsList.innerHTML += 'On <b>' + day + '.</b> in ' + room + ', ' + data['names'][i]  + ' will be giving a talk titled</br>'
           resultsList.innerHTML += data['talkTitle_'][i]
           
                                         
