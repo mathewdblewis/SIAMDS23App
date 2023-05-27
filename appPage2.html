@@ -17,12 +17,13 @@
     placeholder="Type the name of a speaker here, then press enter"
     style="width: 1100px; font-size: 45px; border-width: 5px;"
     >
-  <p id="results" style="font-size: 45px"></p>
+  
+  <p id="line1" style="font-size: 45px"></p>
   <a id="talkLink" target='blank' style="font-size: 45px"></a>
   <p id="line2" style="font-size: 45px"></p>
   <a id="sessLink" target='blank' style="font-size: 45px"></a>
   <p id="line3" style="font-size: 45px"></p>
-
+  <p id="results" style="font-size: 45px"></p>
 
   <p style='font-size:50px'>A QR code link to this webapp:</p>
   <a href="www.qr-code-generator.com/?utm_medium=email&utm_campaign=60ca6572d95fed0001396323&utm_source=5c097869bf21d04a4bb202a1&abe=0&agent_id=5c097869bf21d04a4bb202a1" border="0" style="cursor:default" rel="nofollow"></a><img width='700' src="https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fhtmlpreview.github.io%2F%3Fhttps%3A%2F%2Fgithub.com%2Fmathewdblewis%2FSIAMDS23App%2Fblob%2Fmain%2FappPage.html&chs=180x180&choe=UTF-8&chld=L|2">
@@ -74,9 +75,9 @@
           var name = data['names'][i]
           var talk = data['talkTitle_'][i]
           
-          resultsList.innerHTML += '</br></br>'
-          resultsList.innerHTML += 'On <b>' + day + '.</b> during <b>' + data['talkTime_'][i] + '</b> in <b>' + room + '</b></br>'
-          resultsList.innerHTML += '<b>' + name + '</b> will be presenting:'
+          line1.innerHTML += '</br></br>'
+          line1.innerHTML += 'On <b>' + day + '.</b> during <b>' + data['talkTime_'][i] + '</b> in <b>' + room + '</b></br>'
+          line1.innerHTML += '<b>' + name + '</b> presents:'
           talkLink.innerHTML = talk
           talkLink.href = 'https://meetings.siam.org/sess/dsp_talk.cfm?p='+data['talkID_'][i]
           line2.innerHTML = 'as part of '
