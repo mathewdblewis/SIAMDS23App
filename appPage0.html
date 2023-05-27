@@ -19,6 +19,8 @@
     >
   <p id="results" style="font-size: 45px"></p>
   <a id="talkLink" target='blank' style="font-size: 45px"></a>
+  <p id="line2" style="font-size: 45px"></p>
+  <a id="sessLink" target='blank' style="font-size: 45px"></a>
 
   <table id=myTable style='font-size: 30px;'>
     <tr>
@@ -69,6 +71,8 @@
         var table = document.getElementById("myTable")
         var resultsList = document.getElementById("results")
         var talkLink = document.getElementById("talkLink")
+        var line2 = document.getElementById("line2")
+        var sessLink = document.getElementById("sessLink")
         if (searchResults.length > 0) {
           table.style.display = 'table'
           resultsList.innerHTML =  "Showing results for <b>" + searchResults[0].item.name
@@ -85,10 +89,14 @@
           var talk = data['talkTitle_'][i]
           
           resultsList.innerHTML += '</br></br>'
-          resultsList.innerHTML += 'On <b>' + day + '.</b> in the <b>' + room + '</b> room, <b>'  + name
-          resultsList.innerHTML += '</b> will be presenting:</br>'
+          resultsList.innerHTML += 'On <b>' + day + '.</b> during <b>' + data['talkTime_'][i] + '</b> in the <b>'
+          resultsList.innerHTML += room + '</b> room, <b>'  + name
+          resultsList.innerHTML += '</b> will be presenting:'
           talkLink.innerHTML = talk
           talkLink.href = 'https://meetings.siam.org/sess/dsp_talk.cfm?p='+data['talkID_'][i]
+          line2.innerHTML = 'as part of '
+          sessLink.innerHTML = data['sessTitle'][i]
+          sessLink.href = 'https://meetings.siam.org/sess/dsp_programsess.cfm?sessioncode='+data['sessID'][i]
           
          
           
