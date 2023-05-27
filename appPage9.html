@@ -75,6 +75,8 @@
             resultsList.innerHTML += '<b>' + searchResults[t].item.name + '</b></br>'
           }
           
+          let i = data["names"].indexOf(searchResults[0].item.name)
+          
           resultsList.innerHTML += '</br></br>'
           resultsList.innerHTML += 'On ' + data['day'][i] + ' in ' + data["room"][i] + ', ' + data['names'][i]  + ' will be giving a talk titled</br>'
           resultsList.innerHTML += data['talkTitle_'][i]
@@ -87,7 +89,7 @@
           //   table.rows[0].style.display = 'none'
           // }
 
-          let i = data["names"].indexOf(searchResults[0].item.name)
+          
           document.getElementById(0).innerHTML = data['talkTime_'][i]
           document.getElementById(2).innerHTML = data['sessTime'][i]
           document.getElementById(4).innerHTML = data['day'][i]
