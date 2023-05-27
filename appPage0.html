@@ -75,7 +75,7 @@
           var name = data['names'][i]
           var talk = data['talkTitle_'][i]
           
-          line1.innerHTML += 'On <b>' + day + '.</b> during <b>' + data['talkTime_'][i] + '</b> in <b>' + room + '</b></br>'
+          line1.innerHTML = 'On <b>' + day + '.</b> during <b>' + data['talkTime_'][i] + '</b> in <b>' + room + '</b></br>'
           line1.innerHTML += '<b>' + name + '</b> presents:'
           talkLink.innerHTML = talk
           talkLink.href = 'https://meetings.siam.org/sess/dsp_talk.cfm?p='+data['talkID_'][i]
