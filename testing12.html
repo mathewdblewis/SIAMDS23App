@@ -16,7 +16,8 @@
   }
   var data = ''
   async function getData(){
-    data = await(await fetch('https://raw.githubusercontent.com/mathewdblewis/SIAMDS23App/main/data.txt')).text()
+    data = await(await fetch('https://raw.githubusercontent.com/mathewdblewis/SIAMDS23App/main/DS23_complete.json')).text()
+    data = JSON.parse(data)
   }
   getData()
    
