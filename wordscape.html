@@ -15,7 +15,7 @@
     return true
   }
   async function findAllSubwords(){
-    let A = await(await fetch('https://raw.githubusercontent.com/mathewdblewis/SIAMDS23/main/data.txt')).text()
+    let A = await(await fetch('https://raw.githubusercontent.com/mathewdblewis/SIAMDS23App/main/data.txt')).text()
     document.getElementById('output').innerHTML = A.split(',').filter(a=>subword(a,document.getElementById('input').value.toLowerCase())).join('<br>')
   }
 </script>
