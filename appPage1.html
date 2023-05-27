@@ -78,20 +78,13 @@
           let i = data["names"].indexOf(searchResults[0].item.name)
           
           var day = data['day'][i].slice(0,3)
-          var room = data["room"][i]
+          var room = data["room"][i].split(' - ')[0]
           
           resultsList.innerHTML += '</br></br>'
-          resultsList.innerHTML += 'On <b>' + day + '.</b> in ' + room + ', ' + data['names'][i]  + ' will be giving a talk titled</br>'
+          resultsList.innerHTML += 'On <b>' + day + '.</b> in <b>' + room + '</b>, ' + data['names'][i]  + ' will be giving a talk titled</br>'
           resultsList.innerHTML += data['talkTitle_'][i]
           
-                                        
-          
-          
-          // if (data['talkTitle_'][i] == ''){
-          //   var table = document.getElementById("myTable");
-          //   table.rows[0].style.display = 'none'
-          // }
-
+         
           
           document.getElementById(0).innerHTML = data['talkTime_'][i]
           document.getElementById(2).innerHTML = data['sessTime'][i]
