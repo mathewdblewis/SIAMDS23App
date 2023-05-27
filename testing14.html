@@ -8,23 +8,15 @@
 <p style="color:red;font-size:70px;" id="output"></p>
 
 <script>
-  function subword(w1,w2){
-    d1={};w1.split('').forEach(e=>d1[e]=e in d1?d1[e]+1:1)
-    d2={};w2.split('').forEach(e=>d2[e]=e in d2?d2[e]+1:1)
-    for (var k in d1) {if (!(k in d2) || d2[k]<d1[k]) return false}
-    return true
-  }
+  
   var data = ''
   async function getData(){
     data = await(await fetch('https://raw.githubusercontent.com/mathewdblewis/SIAMDS23App/main/DS23_complete.json')).text()
     data = JSON.parse(data)
   }
   getData()
-   
- function doClick(){
-//    alert(data.slice(0,10))
-   alert(data['names'].slice(0,5))
- }
+ alert(data['names'].slice(0,5))
+ 
   
 </script>
   
