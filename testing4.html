@@ -14,18 +14,17 @@
     for (var k in d1) {if (!(k in d2) || d2[k]<d1[k]) return false}
     return true
   }
-  let A = ''
+  var data = ''
   async function getData(){
-//     console.log('asdf')
-    let A = await(await fetch('https://raw.githubusercontent.com/mathewdblewis/SIAMDS23App/main/data.txt')).text()
-    console.log(A.length)
+    let data = await(await fetch('https://raw.githubusercontent.com/mathewdblewis/SIAMDS23App/main/data.txt')).text()
+    console.log(data.length)
   }
   
   getData()
    
  function doClick(){
-//    alert(A.slice(0,10))
-   alert(A.length)
+//    alert(data.slice(0,10))
+   alert(data.length)
  }
   
 </script>
