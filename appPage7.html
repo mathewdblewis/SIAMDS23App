@@ -79,9 +79,10 @@
           
           var day = data['day'][i].slice(0,3)
           var room = data["room"][i].split(' - ')[0]
+          var name = data['names'][i]
           
           resultsList.innerHTML += '</br></br>'
-          resultsList.innerHTML += 'On <b>' + day + '.</b> in the <b>' + room + '</b> room, <b>'  + room + '</b> room, <b>'
+          resultsList.innerHTML += 'On <b>' + day + '.</b> in the <b>' + room + '</b> room, <b>'  + name + '</b> room, <b>'
           resultsList.innerHTML += data['names'][i]  + '</b> will be presenting:</br>'
           resultsList.innerHTML += data['talkTitle_'][i]
 //           '</a>' <a href=google.com>
