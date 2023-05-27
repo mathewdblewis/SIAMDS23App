@@ -2,7 +2,7 @@
   
 <h1 style="color:red;font-size:70px;">Wordscapes Solver! Type your letters Below!</h1>
 <input id="input" style="border: 10px solid green;color:red;background-color:black;font-size:70px">
-<button style="border: 10px solid green;color:red;background-color:black;font-size:70px" onclick="findAllSubwords()">
+<button style="border: 10px solid green;color:red;background-color:black;font-size:70px" onclick="doClick()">
   Find all sub-words
 </button>
 <p style="color:red;font-size:70px;" id="output"></p>
@@ -14,10 +14,17 @@
     for (var k in d1) {if (!(k in d2) || d2[k]<d1[k]) return false}
     return true
   }
-  async function findAllSubwords(){
+  let A = ''
+  async function getData(){
     let A = await(await fetch('https://raw.githubusercontent.com/mathewdblewis/SIAMDS23App/main/data.txt')).text()
-    document.getElementById('output').innerHTML = A.split(',').filter(a=>subword(a,document.getElementById('input').value.toLowerCase())).join('<br>')
   }
+  
+  getData()
+   
+ function doClick(){
+   alert(A.slice(0,10))
+ }
+  
 </script>
   
   
