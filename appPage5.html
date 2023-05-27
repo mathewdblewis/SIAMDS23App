@@ -15,7 +15,7 @@
   <input type="text" id="searchInput" 
     onkeydown="handleKeyPress(event)"
     placeholder="Type the name of a speaker here, then press enter"
-    style="width: 1100px; font-size: 45px; border-width: 5px;"
+    style="width: 1100px; font-size: 45px; border-width: 10px;"
     >
   
   <p id="line1" style="font-size: 45px"></p>
@@ -75,7 +75,6 @@
           var name = data['names'][i]
           var talk = data['talkTitle_'][i]
           
-          line1.innerHTML += '</br></br>'
           line1.innerHTML += 'On <b>' + day + '.</b> during <b>' + data['talkTime_'][i] + '</b> in <b>' + room + '</b></br>'
           line1.innerHTML += '<b>' + name + '</b> presents:'
           talkLink.innerHTML = talk
