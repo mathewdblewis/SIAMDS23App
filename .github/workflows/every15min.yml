@@ -1,20 +1,20 @@
-name: Minute Workflow
+# name: Minute Workflow
 
-on:
-  schedule:
-    - cron: '*/15 * * * *'  # Runs every minute
+# on:
+#   schedule:
+#     - cron: '*/15 * * * *'  # Runs every minute
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
         
-      - name: create file
-        run: 'echo "Current time: $(date)" > file.txt'
+#       - name: create file
+#         run: 'echo "Current time: $(date)" > file.txt'
         
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4        
+#       - name: Commit changes
+#         uses: stefanzweifel/git-auto-commit-action@v4        
 
